@@ -5,9 +5,9 @@
     <artifactId>servlet-practices</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>helloweb</artifactId>
+  <artifactId>guestbook2</artifactId>
   <packaging>war</packaging>
-  
+
    <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
@@ -38,6 +38,6 @@
   	</dependencies>
   
   <build>
-	<finalName>helloweb</finalName>
+	<finalName>guestbook2</finalName>
   </build>
 </project>
