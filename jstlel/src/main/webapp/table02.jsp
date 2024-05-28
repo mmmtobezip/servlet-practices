@@ -30,12 +30,13 @@ pageEncoding="UTF-8"%>
 	</c:if>
 	
 	<table border="1" cellspacing="0">
-		<!-- 리터럴이면 그냥${0 } = "0"으로 값 줘도됨. -->
+		<!-- 리터럴이면 그냥 "0"으로 값 줘도됨. 즉, "0" == ${0 }-->
 		<c:forEach begin="${0 }" end="${row - 1 }" step="1" var="i">  
 			<tr>
-				<td>cell(${i }, {)</td>
-				<td>cell(${i }, 1)</td>
-				<td>cell(${i }, 2)</td>		
+			<c:forEach begin="0" end="${col - 1 }" step="1" var="j">  
+				<td>cell(${i }, ${j })</td>
+			</c:forEach>	
+			</tr>
 		</c:forEach>
 	</table>
 
