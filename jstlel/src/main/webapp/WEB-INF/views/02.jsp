@@ -21,7 +21,7 @@
 	${vo.name } <br>
 	
 	== 1. Reqeust Scope =============<br>
-	${rquestScope.vo.no } <br>
+	${requestScope.vo.no } <br>
 	${requestScope.vo.name } <br>
 	
 	== 2. Session Scope =============<br>

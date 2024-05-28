@@ -24,23 +24,22 @@ public class _02Servlet extends HttpServlet {
      */
 
     // 1. Reqeust Scope
-    UserVo vo1 = new UserVo();
-    vo1.setNo(1L);
-    vo1.setName("둘리1");
-    request.setAttribute("vo", vo1);
+    UserVo vo3 = new UserVo();
+    vo3.setNo(3L);
+    vo3.setName("둘리3");
+    request.setAttribute("vo", vo3);
 
     // 2. Session Scope
     UserVo vo2 = new UserVo();
-    vo2.setNo(1L);
+    vo2.setNo(2L);
     vo2.setName("둘리2");
-    request.getSession(true);
-    request.setAttribute("vo", vo2);
+    request.getSession(true).setAttribute("vo", vo2);
 
     // 3. Application Scope
-    UserVo vo3 = new UserVo();
-    vo3.setNo(1L);
-    vo3.setName("둘리3");
-    request.getSession(true).setAttribute("vo", vo3);
+    UserVo vo1 = new UserVo();
+    vo1.setNo(1L);
+    vo1.setName("둘리1");
+    request.getServletContext().setAttribute("vo", vo1);
 
     request.getRequestDispatcher("/WEB-INF/views/02.jsp").forward(request, response);
   }
