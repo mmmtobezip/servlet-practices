@@ -3,7 +3,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	List<GuestBookVo> list = new GuestBookDao().findAll();
+	List<GuestBookVo> list = (List<GuestBookVo>)request.getAttribute("list");
 %>
 <!DOCTYPE html>
 <html>
@@ -38,7 +38,7 @@
 		<tr>
 			<td>[<%=count-- %>]</td>
 			<td><%=vo.getName() %></td>
-			<td><%=vo.getRegDate() %></td>
+			<td><%=vo.getPassword() %></td>
 			<td><a href="<%=request.getContextPath() %>/gb?a=deleteform&no=<%=vo.getNo()%>">삭제</a></td>
 		</tr>
 		<tr>
